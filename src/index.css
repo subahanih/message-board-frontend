@@ -1,0 +1,21 @@
+:root {
+  --main-color: #0084ff;
+  --secondary-color: #F5F5F5;
+  --main-text-color: #3e5869;
+  --secondary-text-color: #b0c7d6;
+  --send-message-form: #FFFFFF;
+  --header-color: #fafafa;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  font-weight: 400;
+  color: 	#3e5869; 
+}
+
+#root {
+  height: 100%;
+}
