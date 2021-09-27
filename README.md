@@ -13,23 +13,31 @@ This application comprises of two phases.
 
     2. message-board-backend
     Back-end has been developed using ExpressJs(cors, dotenv, express, express-validator, mysql2)
-    Backend exposes the below services to frontend inorder to fetch channels, messages related to channel, create messages and fetch the user.
+    Backend exposes the below services to frontend inorder to fetch channels, 
+	messages related to channel, create messages and fetch the user.
         i. http://localhost:3001/api/v1/message/channelId/1
         ii. http://localhost:3001/api/v1/message/channel
         iii. http://localhost:3001/api/v1/message/create
-        iv. http://localhost:3001/api/v1/message/user/userId/4 added one more endpoint, which is not specified in the specification. But it would required to fetch user information. As we are using cache beore message is going to/coming from API(back-end) it should display immediately. For this scenario I wanted to get user details. This I have done with Math.random. So evry new seession automatically it will be selecting a user.
+        iv. http://localhost:3001/api/v1/message/user/userId/4 added one more endpoint, 
+		which is not specified in the specification. But it would required to fetch user information. 
+		As we are using cache beore message is going to/coming from API(back-end) it should display immediately. 
+		For this scenario I wanted to get user details. This I have done with Math.random. 
+		So evry new seession automatically it will be selecting a user.
 
     Github Link: https://github.com/subahanih/message-board-backend
 
 ### Note:
-Application will use the front-end port while consuming API. For this I have enable proxy connection in the package.jason("proxy": "http://localhost:3001"). So fron-end will consume services as mentioned below.
+Application will use the front-end port while consuming API. 
+For this I have enable proxy connection in the package.jason("proxy": "http://localhost:3001"). 
+So fron-end will consume services as mentioned below.
     i. http://localhost:3000/api/v1/message/channelId/1
     ii. http://localhost:3000/api/v1/message/channel
     iii. http://localhost:3000/api/v1/message/create
     iv. http://localhost:3001/api/v1/message/userId/5
 
 ### What is missing?
-    ■ Submit button is disabled if there is no text in message body (I have used react Icon and onClick function. icon would be enabled but it will not trigger the service.)
+    ■ Submit button is disabled if there is no text in message body (I have used react Icon and onClick function. 
+	icon would be enabled but it will not trigger the service.)
 
 ### What is completed?
     ● Client visuals
@@ -65,7 +73,7 @@ Application will use the front-end port while consuming API. For this I have ena
 
     ● No error handling required
 
-### How to run (Please go through README.md for configuring message-board-backend)?
+### How to run (Please go through README.md for configuring message-board-frontend)?
     1. npm int
     2. npm install
     3. npm start (Default port is 3000)
